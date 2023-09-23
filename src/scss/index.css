@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+#Header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  height: auto;
+}
+#Header .logo img {
+  max-width: 177px;
+}
+#Header .tgmenu__nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+#Header .tgmenu__navbar-wrap {
+  flex-grow: 1;
+}
+#Header .tgmenu__navbar-wrap ul {
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto 0 122px;
+}
+#Header .tgmenu__navbar-wrap ul li {
+  display: block;
+  position: relative;
+  list-style: none;
+}
+#Header .tgmenu__navbar-wrap ul li a {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Barlow", sans-serif;
+  padding: 38px 23px;
+  display: block;
+  line-height: 1;
+  position: relative;
+  letter-spacing: 0.8px;
+  z-index: 1;
+}
+#Header .tgmenu__navbar-wrap ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 42px;
+  height: 1px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  background: #45f882;
+  margin: 0 auto;
+  opacity: 0;
+  transition: all 0.7s ease-out 0s;
+}
+#Header .tgmenu__navbar-wrap ul li .sub-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 230px;
+  border: 1px solid var(--tg-border-2);
+  background: var(--tg-common-color-gray);
+  margin: 0;
+  box-shadow: 0px 30px 70px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  padding: 18px 0;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9;
+  transform: scale(1, 0);
+  transform-origin: 0 0;
+  transition: all 0.3s ease-out 0s;
+}
+#Header .tgmenu__navbar-wrap ul li :hover, #Header .tgmenu__navbar-wrap ul a {
+  color: #45f882;
+}
+#Header .tgmenu__navbar-wrap ul li:hover ::before, #Header .tgmenu__navbar-wrap ul a ::before {
+  transform: translateY(-50%) rotate(-40deg);
+  opacity: 1;
+}
+#Header .tgmenu__navbar-wrap ul li :hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+#First {
+  background-image: url(../media/breadcrumb_bg01.jpg);
+  padding: 100px;
+  display: flex;
+}
+#First .contain {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 1300px;
+  padding: 100px;
+}
+#First .contain .content {
+  width: 50%;
+}
+#First .contain .content h1 {
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1;
+  margin: 0 0;
+  color: white;
+}
+#First .contain .content nav {
+  display: flex;
+}
+#First .contain .content nav a {
+  color: #45f882;
+  transition: all 0.3s ease-out 0s;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+#First .contain .content nav a::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: #45f882;
+  border-radius: 50%;
+  margin: 0px 10px;
+}
+#First .contain .content nav span {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+#First .contain .picture {
+  width: 50%;
+  position: relative;
+}
+#First .contain .picture .picture_mod {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+}/*# sourceMappingURL=index.css.map */
